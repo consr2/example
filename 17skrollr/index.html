@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="text">0</div>
+    <div class="fixed_bg" 
+    data-0="background-color:rgb(50, 50, 50);" 
+    data-0="background-color:rgb(84, 186, 185);"
+    data-1000="background-color:rgb(184, 186, 185); width:100%; left:0%;"
+    data-2000="width:60%; left:20%"
+    ></div>
+
+    <section class="slide slide1"
+    data-0="top:0%"
+    data-500="top:-100%"
+    >
+        <div class="slide-content">
+            <h2>제목입니다(위로 올라갑니다)</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae hic necessitatibus, ipsum doloremque provident maiores!</p>
+        </div>
+    </section>
+
+    <section class="slide slide2"
+    data-500="opacity:0; transform:translateX(100%)"
+    data-1000="opacity:1; transform:translateX(0%)"
+    data-2000="opacity:0;"
+    >
+    <div class="slide-content">
+        <h2>오른쪽에서 나와서. 투명도 있어요</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius nesciunt dolor repellendus hic dicta voluptas temporibus fuga sequi debitis quaerat.</p>
+    </div>
+    </section>
+
+    <section class="slide slide3"
+    data-1000="opacity:0; top:-100%"
+    data-2000="opacity:1; top: 0%"
+    >
+    <div class="slide-content">
+        <h2>위에서 내려와요 투명도 있어오</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusamus libero dolorem nostrum rem modi alias aspernatur laudantium non ipsum!</p>
+    </div>
+    </section>
+
+    <section class="slide slide4"
+    data-2000="opacity:0"               
+    data-3000="opacity:1"
+    >
+    <!-- css에서 기준이 left로 줘서 right는 먹히지 않는다 -->
+        <div class="slide-content"
+        data-2000="top:200px"               
+        data-3000="top:0px"
+        >
+            <h2>이미지영역과 텍스트 영역을 분류합니다</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas quidem, at et ut illo facilis incidunt facere consequuntur quae.</p>
+        </div>
+    </section>
+
+    <section class="slide slide5"
+    data-2500="top:100%"
+    data-4500="top:-100%"
+    >
+        <img src="img/shuttle.png" alt="shuttle">
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+        var text = document.querySelector('.text')
+
+        window.addEventListener('scroll',function(){
+            var wScroll = window.pageYOffset
+            text.innerHTML = wScroll
+        })
+        
+    </script>
+</body>
+</html>

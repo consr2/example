@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="front">
+        <div class="side" id="side1"></div>
+        <div class="side" id="side2"></div>
+        
+    </div>
+    <div class="contentBox">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam consectetur quae vero! Doloribus provident ad ducimus consequuntur sit sequi tempore sunt cupiditate? Minima explicabo perferendis at eveniet libero nobis maiores minus quam? Illum nihil consequatur eum expedita doloribus labore numquam fugit? Voluptas recusandae tempora quisquam doloribus. Debitis necessitatibus eius cumque cupiditate ipsam praesentium? Soluta blanditiis ipsam non amet impedit obcaecati laboriosam quos accusamus nulla, voluptatum aliquid nihil excepturi numquam, repellat explicabo. Incidunt aliquam accusamus dolores voluptate impedit harum. Voluptatum, excepturi, dolorum sit est at consequatur expedita adipisci nobis cum ipsa dolore doloremque atque facere recusandae similique animi vel quam sed. Laudantium laborum nulla voluptas incidunt ea velit pariatur error. Distinctio quidem repudiandae necessitatibus rerum atque velit laudantium pariatur repellendus minima architecto molestiae aliquam expedita, a corrupti fuga fugit unde! Harum libero nihil at consequuntur ducimus possimus modi consequatur dolor ut laborum velit quod quisquam voluptates nesciunt dolore, beatae doloremque cupiditate recusandae eveniet voluptatem. Quas cumque officia debitis qui esse voluptate eos deserunt, ex odit, sapiente, dolorem laborum inventore molestiae itaque porro dolorum! Velit inventore impedit optio alias amet, dignissimos doloremque eius voluptate cum rerum ipsum nesciunt! Assumenda laudantium autem, dolore laborum quis expedita perspiciatis dicta molestiae inventore, magnam ratione? In amet ipsum nulla minima quibusdam architecto, hic qui et fugit delectus cumque nostrum cum optio. Vero fugiat illum at perferendis, ab dolores pariatur culpa vel libero similique incidunt, doloremque, cumque officia quia nobis officiis molestias dolorum. Sed quia provident, soluta amet optio necessitatibus in commodi ipsam iusto recusandae consequatur laborum nihil repellendus deleniti iure sunt quam odio aut. Voluptatem officiis iste perspiciatis quae nisi consequatur consectetur fugit, ut ullam dignissimos aperiam doloremque vel aut! Dolor reiciendis veniam perferendis amet dignissimos minus veritatis nisi pariatur non dolores. Ducimus vel ullam eius iure ut, rerum, reprehenderit maiores tempore pariatur porro sapiente nesciunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat debitis perferendis pariatur qui, id odit ullam deleniti amet iusto ratione explicabo necessitatibus eveniet facilis hic similique eaque minima? Explicabo ducimus, aut natus, necessitatibus non totam numquam nam fugiat odio quam velit repudiandae illum est? Odit incidunt eaque qui et recusandae error culpa nihil, numquam quasi obcaecati natus consequuntur assumenda eum enim. Suscipit a commodi voluptates delectus amet dolorem tempora ipsa architecto facere rerum dolore accusamus, non molestiae est nulla dolores, recusandae, maiores labore! Maiores voluptatum explicabo, molestias, est dolore quibusdam quo esse assumenda minima vel adipisci quis nesciunt. Ad magni culpa porro deleniti maiores asperiores, non maxime nesciunt omnis tempore reprehenderit rerum sequi sunt dolores dignissimos doloribus doloremque pariatur earum perferendis quam mollitia iure id placeat in. Aliquam neque, sapiente similique nemo ratione quibusdam itaque odio amet laborum eum explicabo earum eveniet quo perferendis nobis. Aliquid at deleniti ipsam officiis quis impedit quia perspiciatis totam. Exercitationem esse, reiciendis iure velit eum mollitia delectus laborum quaerat magni amet expedita placeat culpa commodi aliquid deserunt voluptatibus nostrum labore temporibus nihil, voluptas distinctio deleniti. Ducimus eos dicta autem at, voluptatibus odit nam excepturi? Voluptates vel dicta dolorum. Unde, exercitationem voluptate soluta deleniti ad assumenda, neque quidem eos voluptates architecto, odit debitis doloremque velit dignissimos consequuntur laboriosam ex reprehenderit sapiente id. Culpa sit ex veniam reiciendis repellat esse pariatur, ullam officia optio sed suscipit dolore cum consequatur assumenda quo labore eveniet ducimus nobis quibusdam? Nemo magni, officiis molestiae aliquam animi fuga fugit iusto enim reprehenderit pariatur aut ducimus tenetur exercitationem id aliquid mollitia minus, ipsa ut nobis tempore repellat eveniet, consequatur cupiditate ad. Ab earum expedita architecto maiores, cupiditate, laudantium nobis reiciendis sequi dolorum tempore, adipisci ipsa? Voluptatibus soluta cumque fugit saepe, harum delectus. Aliquid temporibus sequi ad quasi officia ratione, sunt a.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A odit alias eos provident praesentium aliquid ad adipisci facilis, maxime, obcaecati nemo esse quas perspiciatis. Accusamus maxime corporis voluptates hic temporibus eius odit esse dolor nemo. Velit quia inventore facilis in.</p>
+    </div>
+
+
+    <script>
+        var side1=document.querySelector('#side1')
+        var side2=document.querySelector('#side2')
+
+        window.addEventListener('scroll',function(){
+            //side1.style.left = '-' + window.pageYOffset + 'px'
+            side1.style.left = '-' + window.scrollY + 'px'
+            side2.style.left = window.scrollY + 'px'
+            // side2.style.right = '-' + window.scrollY + 'px'   div. front를  left0을 줘서 안먹힌다
+
+
+        })
+    </script>
+</body>
+</html>
