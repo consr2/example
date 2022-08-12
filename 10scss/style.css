@@ -1,0 +1,16 @@
+.content {
+  color: blue;
+}
+.content h2 {
+  color: red;
+  position: relative;
+}
+.content h2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: green;
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=style.css.map */

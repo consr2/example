@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+body{
+    background: #222;
+}
+
+main{position: relative; background: red; height: 100vh;}
+
+main .contentWrap{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%) rotate(30deg);
+    width: 420px;
+    visibility: hidden;
+}
+
+main .contentWrap.active{visibility: visible;}
+
+main .contentWrap img{
+    width: 200px;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+
+
+main .contentWrap img.img0{transform: translate(-300%,0px); transition-delay: 0.1;}
+main .contentWrap img.img1{transform: translate(0px,-300%);transition-delay: 0.2;}
+main .contentWrap img.img2{transform: translate(0px,300%);transition-delay: 0.26;}
+main .contentWrap img.img3{transform: translate(300%,0px);transition-delay: 0.3;}
+
+main .contentWrap img.active{opacity: 1;transform: translate(0,0);}
+
+
+.textWrap{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    background: #000;
+    width: 200px;
+    z-index: 100;
+    text-align: center;
+}
+.textWrap h1{color: #fff; padding: 20px 0;}
+
+.buttonWrap{position: absolute; bottom: 50px; left: 50%; transform: translate(-50%,-50%);}
+.buttonWrap button{
+    padding: 10px 40px;
+    background: #fff;
+    font-size: 20px;
+}

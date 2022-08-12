@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pepsi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sec">
+        <div id="main" class="header">
+            <a href="#"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <div class="content">
+            <div class="textbox">
+                <h2>Thas's what <br> <span>I like</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione consequatur ipsum aperiam voluptatibus architecto sequi animi ipsam rem corporis assumenda.</p>
+                <a href="#">View All Products</a>
+            </div><!--//End textbox-->
+            <div class="imgbox">
+                <img src="img/pepsi001.png" alt="peps1" class="pepsi">
+            </div><!--//End imgbox-->
+            <div class="txt">
+                <div class="text1">제목1입니다.</div>
+                <div class="text2">제목1-1입니다.</div>
+            </div><!--//End txt-->
+            <ul class="tumb1">
+                <li><img src="img/pepsi001.png" alt="1"
+                    onclick="imgslider('img/pepsi001.png'); changebg('img/bg1.jpg'); 
+                    changetext('제목1입니다.','제목1-1입니다');">
+                </li>
+                <li><img src="img/pepsi002.png" alt="2"
+                    onclick="imgslider('img/pepsi002.png'); changebg('img/bg2.jpg');
+                    changetext('제목2입니다.','제목2-2입니다');">
+                </li>
+                <li><img src="img/pepsi003.png" alt="3"
+                    onclick="imgslider('img/pepsi003.png'); changebg('img/bg3.jpg');
+                    changetext('제목3입니다.' , '제목3-3입니다');">
+                </li>
+            </ul>
+        </div><!--//End content-->
+    </div><!--//End sec-->
+
+    <script>
+        function imgslider(anything){
+            document.querySelector('.imgbox .pepsi').src=anything
+        }
+
+        function changebg(bg){
+            var sec = document.querySelector('.sec')
+            sec.style.backgroundImage='url(' + bg + ')'
+        }
+
+        function changetext(tx1, tx2){
+            var txt1 = document.querySelector('.txt .text1');
+            var txt2 = document.querySelector('.txt .text2');
+            txt1.innerHTML=tx1; // 글자를 입력하는 명령문(기존글자 사라짐)
+            txt2.innerHTML=tx2;
+        }
+
+
+    </script>
+</body>
+</html>
